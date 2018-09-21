@@ -1,0 +1,18 @@
+block
+
+-- Bare Minimum .vimrc --
+
+I really couldn't care less if you use vim or not,
+but if you are going to, please PLEASE put at least
+these lines into a file called `~/.vimrc`
+
+    syntax on       " turn on syntax highlighting
+    set number      " turn on line numbers
+    set mouse=a     " enable the mouse
+    set backspace=2 " make backspace work normally
+
+You can also consider playing with your colorscheme
+to get something that you think is easier on the
+eyes:
+
+    colorscheme desert " change colorscheme

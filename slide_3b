@@ -1,0 +1,12 @@
+block
+
+-- Bash --
+
+              Ctrl-a, Ctrl-e, Ctrl-w
+
+
+Ctrl-a: Go to start of prompt
+Ctrl-e: Go to end of prompt
+Ctrl-w: Delete previous word
+
+Scenario: Loooooooooooooooooong command

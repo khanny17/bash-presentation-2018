@@ -1,0 +1,10 @@
+block
+
+-- ls --
+
+         -a, -l
+
+-a: list all files, even hidden ones
+-l: show more info about files
+
+Scenario: editing a dotfile

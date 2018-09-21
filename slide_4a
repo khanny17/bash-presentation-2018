@@ -1,0 +1,12 @@
+block
+
+-- Grep --
+
+               Grep is really cool
+            You can use it everywhere
+              Haikus are hard. Boop.
+
+
+Grep pulls lines out of text that match a word/regex/etc
+that you give it. It is EXCEPTIONALLY handy, and I'll use
+it throughout this presentation.

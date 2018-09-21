@@ -1,0 +1,13 @@
+block
+
+-- less --
+
+        View file contents
+
+You can view files with a tool called less
+
+less is an improved version of a tool called more.
+There is also a tool called most. It is an improved less.
+Ironically, most systems do not come with most.
+
+Scenario: Don't feel like opening vim

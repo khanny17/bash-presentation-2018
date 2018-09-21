@@ -1,0 +1,364 @@
+center
+
+
+  ____            _         ___    _       _               
+ |  _ \          | |       / / |  | |     (_)              
+ | |_) | __ _ ___| |__    / /| |  | |_ __  ___  _          
+ |  _ < / _` / __| '_ \  / / | |  | | '_ \| \ \/ /         
+ | |_) | (_| \__ \ | | |/ /  | |__| | | | | |>  <          
+ |____/ \__,_|___/_| |_/_/    \____/|_| |_|_/_/\_\         
+ |  __ \             | |          | | (_)     (_) |        
+ | |__) | __ ___   __| |_   _  ___| |_ ___   ___| |_ _   _ 
+ |  ___/ '__/ _ \ / _` | | | |/ __| __| \ \ / / | __| | | |
+ | |   | | | (_) | (_| | |_| | (__| |_| |\ V /| | |_| |_| |
+ |_|   |_|  \___/ \__,_|\__,_|\___|\__|_| \_/ |_|\__|\__, |
+                                                      __/ |
+                                                     |___/ 
+"How to not be slow"
+
+<b>Kevin Hannigan<r>
+center
+
+<u>What I'll go over:<r>
+
+ - Common tools, shortcuts, configurations                 
+ - A step beyond the very very very basics                 
+ - Most tools should come by default on Ubuntu             
+
+block
+
+<u>What I assume:<r>
+
+ - You have some familiarity with the command line
+     - cd
+     - ls
+     - Command line text editor of choice 
+           (vim or any of the other bad ones)
+
+block
+
+<u>Why bother?<r>
+
+ - Learning a few shortcuts and tools can make
+ a huge difference
+block
+
+<u>Format:<r>
+
+ 1: Introduce tool/shortcut/etc
+ 2: Give real-ish work scenario
+ 3: Show how tool can resolve problem quickly
+section
+
+         Bash         
+block
+
+-- Bash --
+
+              Tab Completion, ctrl-r
+
+
+Pressing <TAB> tries to autocomplete what you are typing
+Pressing ctrl-r lets you reverse search your bash history
+
+Scenario: What was that ssh command?
+
+block
+
+-- Bash --
+
+              Ctrl-a, Ctrl-e, Ctrl-w
+
+
+Ctrl-a: Go to start of prompt
+Ctrl-e: Go to end of prompt
+Ctrl-w: Delete previous word
+
+Scenario: Loooooooooooooooooong command
+block
+
+-- Bash --
+
+                  !! && > |
+
+!! gets replaced with the previous command
+&& lets you run two commands on one line
+| lets you "pipe" output into another program
+> spits stdout to a file instead of printing it
+    To also send stderr to file, also add 2>&1
+
+
+Scenario: Building and running a program
+block
+
+-- Bash --
+
+              ctrl-z, fg, bg
+
+Ctrl-z: stop current job
+bg: run job in background
+fg: run job in foreground
+
+Scenario: Vim takes a long time to open
+section
+
+Grep, your new best friend
+block
+
+-- Grep --
+
+               Grep is really cool
+            You can use it everywhere
+              Haikus are hard. Boop.
+
+
+Grep pulls lines out of text that match a word/regex/etc
+that you give it. It is EXCEPTIONALLY handy, and I'll use
+it throughout this presentation.
+block
+
+-- Grep --
+
+                      Basic Usage
+
+Pipe text into grep with `|`, like we talked about
+earlier.
+
+`-v`: removes lines that match instead of removing lines
+that don't match
+
+Scenario: There's a lot of files in this directory...
+block
+
+-- Grep --
+
+                   Searching a folder
+
+If you use `-r`, grep will recursively search all the files
+in a directory for the term you gave it
+
+Scenario: Where is this config value defined?
+section
+
+Some basics:
+
+cd, ls, ps, who, find
+block
+
+-- cd --
+
+              - ~
+
+cd: go to home directory
+cd ~: go to home directory
+cd -: go to previous directory
+
+Scenario: Back and forth between 2 projects
+
+block
+
+-- ls --
+
+         -a, -l
+
+-a: list all files, even hidden ones
+-l: show more info about files
+
+Scenario: editing a dotfile
+block
+
+-- ps --
+
+         -aux
+
+-aux: show every process on the system
+
+    >>> No, I don't know what each individual one means.
+
+Scenario: Wait, did that background process actually close?
+block
+
+-- who --
+
+            See who is logged on to a system
+
+Scenario: Trolling your friends by writing to /dev/ttyX
+
+er... I mean... Making sure it is okay to reboot!
+block
+
+-- find --
+
+                   Search for files
+
+find spits out all the files in a directory
+
+You can add command line arguments to narrow
+results, like `-name` (or `-iname` for case
+insensitive)
+
+...but I usually just use grep...
+
+Scenario: I know that file was called ____,
+          but where is it?
+section
+
+screen / tmux
+block
+
+-- screen / tmux --
+
+        screen is a screen manager
+
+There a myriad of benefits to using screen,
+especially when ssh'd into a box remotely.
+
+ - You can scrollback
+ - You can split the window
+ - You can have multiple terminals open in the
+   background
+ - If you get disconnected, your screen session
+   will stay running
+
+block
+
+-- screen / tmux --
+
+              Usage
+
+To open a screen session, run `screen`
+To detach a screen session, press `Ctrl-a, d`
+    >>> This leaves it running in the background
+To resume a screen session, run `screen -r`
+
+`Ctrl-a, |`:     split a pane vertically
+`Ctrl-a, S`:     split a pane horizontally
+`Ctrl-a, <TAB>`: switch panes
+`Ctrl-a, [':     visual mode (scrolling)
+
+Scenario: My senior project
+section
+
+More assorted commands:
+
+cat, less, wget, tail, watch, xargs
+block
+
+-- cat --
+
+        Prints file contents
+
+Scenario: Need to print file contents
+block
+
+-- less --
+
+        View file contents
+
+You can view files with a tool called less
+
+less is an improved version of a tool called more.
+There is also a tool called most. It is an improved less.
+Ironically, most systems do not come with most.
+
+Scenario: Don't feel like opening vim
+block
+
+-- wget --
+
+        Download a thing from internet
+
+wget can download a url for you
+
+Scenario: zip files in SWEN-250
+
+block
+
+-- tail --
+
+        Print just the end of a file
+
+-F: follow it as new lines are written to the file
+
+Scenario: My senior project
+block
+
+-- watch --
+
+        Run a command over and over
+
+Scenario: Waiting for a connection
+block
+
+-- xargs --
+
+For when you want the output of one cmd
+to be the arguments to another.
+
+Usage:
+my-cool-command | xargs cmd2
+
+
+Scenario: Deleting files that you just
+          grepped for
+section
+
+alias, scripting, configs
+block
+
+-- alias --
+
+
+You can create an "alias" in your bashrc for
+commands you run frequently.
+
+If you find yourself typing out the same
+long command the same way every time, consider
+making an alias for it!
+
+
+`in ~/.bashrc`:
+    alias cf="ps aux | grep"
+    alias tmux="tmux -2"
+    alias gmm="gmakemake > Makefile"
+
+    ...and so on and forth...
+block
+
+-- Bash Scripts --
+
+If you find yourself running the same set
+of commands in a row over and over, consider
+writing a bash script to automate it.
+
+Name your file `something.sh`
+Make the first line a "shebang" ->
+    #!/bin/bash
+
+And then write the commands you want to execute.
+
+There are also if statements and loops, but
+try not to get too carried away.
+block
+
+-- Bare Minimum .vimrc --
+
+I really couldn't care less if you use vim or not,
+but if you are going to, please PLEASE put at least
+these lines into a file called `~/.vimrc`
+
+    syntax on       " turn on syntax highlighting
+    set number      " turn on line numbers
+    set mouse=a     " enable the mouse
+    set backspace=2 " make backspace work normally
+
+You can also consider playing with your colorscheme
+to get something that you think is easier on the
+eyes:
+
+    colorscheme desert " change colorscheme
+section
+
+Fin.
+
+telnet towel.blinkenlights.nl

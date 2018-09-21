@@ -1,0 +1,16 @@
+block
+
+-- screen / tmux --
+
+        screen is a screen manager
+
+There a myriad of benefits to using screen,
+especially when ssh'd into a box remotely.
+
+ - You can scrollback
+ - You can split the window
+ - You can have multiple terminals open in the
+   background
+ - If you get disconnected, your screen session
+   will stay running
+

@@ -1,0 +1,16 @@
+block
+
+-- find --
+
+                   Search for files
+
+find spits out all the files in a directory
+
+You can add command line arguments to narrow
+results, like `-name` (or `-iname` for case
+insensitive)
+
+...but I usually just use grep...
+
+Scenario: I know that file was called ____,
+          but where is it?

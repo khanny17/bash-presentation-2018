@@ -1,0 +1,13 @@
+block
+
+-- Grep --
+
+                      Basic Usage
+
+Pipe text into grep with `|`, like we talked about
+earlier.
+
+`-v`: removes lines that match instead of removing lines
+that don't match
+
+Scenario: There's a lot of files in this directory...

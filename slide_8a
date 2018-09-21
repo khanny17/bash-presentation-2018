@@ -1,0 +1,19 @@
+block
+
+-- alias --
+
+
+You can create an "alias" in your bashrc for
+commands you run frequently.
+
+If you find yourself typing out the same
+long command the same way every time, consider
+making an alias for it!
+
+
+`in ~/.bashrc`:
+    alias cf="ps aux | grep"
+    alias tmux="tmux -2"
+    alias gmm="gmakemake > Makefile"
+
+    ...and so on and forth...

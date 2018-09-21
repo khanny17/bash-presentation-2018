@@ -1,0 +1,12 @@
+block
+
+-- Bash --
+
+              Tab Completion, ctrl-r
+
+
+Pressing <TAB> tries to autocomplete what you are typing
+Pressing ctrl-r lets you reverse search your bash history
+
+Scenario: What was that ssh command?
+

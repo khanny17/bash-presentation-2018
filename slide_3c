@@ -1,0 +1,14 @@
+block
+
+-- Bash --
+
+                  !! && > |
+
+!! gets replaced with the previous command
+&& lets you run two commands on one line
+| lets you "pipe" output into another program
+> spits stdout to a file instead of printing it
+    To also send stderr to file, also add 2>&1
+
+
+Scenario: Building and running a program

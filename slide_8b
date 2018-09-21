@@ -1,0 +1,16 @@
+block
+
+-- Bash Scripts --
+
+If you find yourself running the same set
+of commands in a row over and over, consider
+writing a bash script to automate it.
+
+Name your file `something.sh`
+Make the first line a "shebang" ->
+    #!/bin/bash
+
+And then write the commands you want to execute.
+
+There are also if statements and loops, but
+try not to get too carried away.

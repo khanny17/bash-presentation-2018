@@ -1,0 +1,7 @@
+block
+
+-- cat --
+
+        Prints file contents
+
+Scenario: Need to print file contents

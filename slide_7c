@@ -1,0 +1,10 @@
+block
+
+-- wget --
+
+        Download a thing from internet
+
+wget can download a url for you
+
+Scenario: zip files in SWEN-250
+

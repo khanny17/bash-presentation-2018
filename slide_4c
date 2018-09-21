@@ -1,0 +1,10 @@
+block
+
+-- Grep --
+
+                   Searching a folder
+
+If you use `-r`, grep will recursively search all the files
+in a directory for the term you gave it
+
+Scenario: Where is this config value defined?

@@ -1,0 +1,11 @@
+block
+
+-- ps --
+
+         -aux
+
+-aux: show every process on the system
+
+    >>> No, I don't know what each individual one means.
+
+Scenario: Wait, did that background process actually close?

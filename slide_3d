@@ -1,0 +1,11 @@
+block
+
+-- Bash --
+
+              ctrl-z, fg, bg
+
+Ctrl-z: stop current job
+bg: run job in background
+fg: run job in foreground
+
+Scenario: Vim takes a long time to open

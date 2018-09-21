@@ -1,0 +1,13 @@
+block
+
+-- xargs --
+
+For when you want the output of one cmd
+to be the arguments to another.
+
+Usage:
+my-cool-command | xargs cmd2
+
+
+Scenario: Deleting files that you just
+          grepped for

@@ -1,0 +1,17 @@
+block
+
+-- screen / tmux --
+
+              Usage
+
+To open a screen session, run `screen`
+To detach a screen session, press `Ctrl-a, d`
+    >>> This leaves it running in the background
+To resume a screen session, run `screen -r`
+
+`Ctrl-a, |`:     split a pane vertically
+`Ctrl-a, S`:     split a pane horizontally
+`Ctrl-a, <TAB>`: switch panes
+`Ctrl-a, [':     visual mode (scrolling)
+
+Scenario: My senior project
